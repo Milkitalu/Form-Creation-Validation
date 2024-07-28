@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (username.length < 3) {
         isValid = false;
-        messages.push("message0") = "Username should be greater than three characters";
+        messages.push() = "Username should be greater than three characters";
     }
 
     if (email.includes('@') && email.includes('.')) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackDiv.style.color = "#28a745";
 
     } else {
-        feedbackDiv.innerHTML = messages.join("<br>");
+        feedbackDiv.innerHTML = message.join("<br>");
         feedbackDiv.style.color = "#dc3545" ;
     }
 
