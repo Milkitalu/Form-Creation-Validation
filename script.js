@@ -13,35 +13,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const password = document.getElementById("password").value.trim();
 
     isValid = true;
-    let message = [];
+    let messages = [];
 
     if (username.length < 3) {
         isValid = false;
-        message.push("message0") = "Username should be greater than three characters";
+        messages.push("message0") = "Username should be greater than three characters";
     }
 
     if (email.includes('@') && email.includes('.')) {
         console.log("Valid Email")
     } else {
         isValid = false;
-        message.push() = "Please enter valid email";
+        messages.push() = "Please enter valid email";
     }
 
     if (password.length >= 8) {
         console.log("Your password matches minimum character");
     } else {
         isValid=false;
-        message.push() = "Password should be at least eight character";
+        messages.push() = "Password should be at least eight character";
     }
 
-    feedbackDiv.style.display = "block" ;
+    messages["message"].feedbackDiv.style.display = block ;
 
     if (isValid === true) {
         feedbackDiv.textContent = "Registration successful!";
         feedbackDiv.style.color = "#28a745";
 
     } else {
-        feedbackDiv.innerHTML = message.join("<br>");
+        feedbackDiv.innerHTML = messages.join("<br>");
         feedbackDiv.style.color = "#dc3545" ;
     }
 
